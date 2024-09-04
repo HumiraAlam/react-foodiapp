@@ -1,0 +1,25 @@
+.header{
+    height: 100px;
+    background-color: gray;
+    margin: 0;
+    border: 1px solid, black;
+    
+}
+
+.main{
+    /* background: url("../public/images/bg.png"); */
+    background-color: antiquewhite;
+    background-size: cover;
+    height: 500px;
+    margin: 0;
+    border: 1px solid, red;
+    padding: 0;
+    
+}
+.foodcard{
+    height: 200px;
+    width: 300px;
+    background-color: blanchedalmond;
+    border-radius: 30px;
+   
+}
