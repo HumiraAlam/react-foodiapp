@@ -1,25 +1,46 @@
+
 .header{
-    height: 100px;
+    height: 30vh;
     background-color: gray;
-    margin: 0;
-    border: 1px solid, black;
-    
+    padding:20px;    
 }
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30vh;
+  }
 
 .main{
-    /* background: url("../public/images/bg.png"); */
-    background-color: antiquewhite;
-    background-size: cover;
-    height: 500px;
-    margin: 0;
-    border: 1px solid, red;
-    padding: 0;
-    
+    background-image: url("/images/bg.png");
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 100px;
 }
-.foodcard{
-    height: 200px;
-    width: 300px;
-    background-color: blanchedalmond;
-    border-radius: 30px;
+.food-card{
+    display: flex;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: transparent;
+    width: 30%;
+    border: 1px solid violet;
    
 }
+.food-card h4 {
+    color: white;
+  }
+  
+  .food-card p {
+    font-size: 12px;
+    color: white;
+  }
+  
+  .food-card span {
+    background-color: orangered;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  

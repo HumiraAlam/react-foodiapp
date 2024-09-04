@@ -4,12 +4,13 @@ export default function FoodCard(props) {
   const { heading, details, image, price } = props;
 
   return (
-    <div className="foodcard">
-    
-      <h3>{heading}</h3>
-      <p>{details}</p>
-     
-      <p>{price}</p>
+    <div className="food-card">
+      <img src={image} />
+      <div>
+        <h4>{heading}</h4>
+        <p>{details}</p>
+        <span>${price}</span>
+      </div>
     </div>
   );
 }

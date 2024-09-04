@@ -1,7 +1,7 @@
 import React from "react";
 import FoodCard from "./FoodCard";
 
-export default function Main(props) {
+export default function Main({searchValue}) {
   const foodData = [
     {
       name: "Boilded Egg",
@@ -46,17 +46,33 @@ export default function Main(props) {
       type: "dinner",
     },
   ];
+// to filter data
+  const filterArr= foodData.filter((food)=>{
+    return food.name.toUpperCase().includes(searchValue.toUpperCase());
+  })
 
   return (
-    <>
-    <div className="main">
-      <FoodCard heading="hi" details="<dffcf ccc cdcd" price="$23" />
-      <FoodCard/>
-      <FoodCard/>
-      <FoodCard/>
-      <FoodCard/>
-      
+    
+      <div className="main">
+        {(filterArr.length) ? (filterArr.map((data) => {
+          return (
+           
+              <FoodCard
+                key={data.name}
+                image={data.image}
+                price={data.price}
+                heading={data.name}
+                details={data.text}
+              />
+            
+          );
+        })
+      ): (
+        <h2 style={{ color: "white", fontSize: "100px", textAlign: "center" }}>
+          No Data found
+        </h2>
+      )}
     </div>
-    </>
   );
 }
+
